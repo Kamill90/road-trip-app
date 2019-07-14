@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.tslintIntegration": true,
+  "editor.formatOnSave": true
+}

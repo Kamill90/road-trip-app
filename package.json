@@ -6,8 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
-    "test": "jest",
-    "lint": "eslint ."
+    "tslint": "tslint --project .",
+    "test": "jest"
   },
   "dependencies": {
     "react": "16.8.6",
@@ -24,8 +24,12 @@
     "eslint": "^6.0.1",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.55.0",
+    "prettier": "1.18.2",
     "react-native-typescript-transformer": "^1.2.12",
     "react-test-renderer": "16.8.6",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.5.3"
   },
   "jest": {

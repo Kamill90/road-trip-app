@@ -1,12 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React from 'react'
+import React from 'react';
 import { Fragment } from 'react';
 import {
   SafeAreaView,
@@ -32,7 +24,8 @@ const App = () => {
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+          style={styles.scrollView}
+        >
           <Header />
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
