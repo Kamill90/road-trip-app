@@ -57,3 +57,8 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+android/app/road-trip-application
+personalReadMe.md
+android/gradle.properties
+road-trip-app-key.p12
+android/gradle.properties

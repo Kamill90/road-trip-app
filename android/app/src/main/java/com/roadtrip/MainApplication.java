@@ -1,4 +1,4 @@
-package com.roadtrip;
+package com.roadtripapp;
 
 import android.app.Application;
 
