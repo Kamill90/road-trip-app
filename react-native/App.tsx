@@ -8,10 +8,26 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-// import BackgroundGeolocation from '@mauron85/react-native-background-geolocation';
+import Geolocation from 'react-native-geolocation-service';
 
 
 class App extends React.Component {
+  componentDidMount() {
+    // Instead of navigator.geolocation, just use Geolocation.
+    // if (hasLocationPermission) {
+        Geolocation.getCurrentPosition(
+            (position) => {
+                console.warn(position);
+            },
+            (error) => {
+                // See error code charts below.
+                console.warn(error.code, error.message);
+            },
+            { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+        );
+    // }
+}
+
   render() {
     return (
       <View style={styles.mainContainer}>

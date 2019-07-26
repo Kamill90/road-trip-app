@@ -57,6 +57,8 @@ PODS:
     - React-cxxreact (= 0.60.0)
     - React-jsi (= 0.60.0)
   - React-jsinspector (0.60.0)
+  - react-native-geolocation (1.4.2):
+    - React
   - React-RCTActionSheet (0.60.0):
     - React-Core (= 0.60.0)
   - React-RCTAnimation (0.60.0):
@@ -95,6 +97,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -134,6 +137,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-geolocation:
+    :path: "../node_modules/@react-native-community/geolocation"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -170,6 +175,7 @@ SPEC CHECKSUMS:
   React-jsi: 40f467ff088c811c6630acccb4aea57ea7ccb1b5
   React-jsiexecutor: e4b4717060a0cd8d0270323b5655a68c95432efd
   React-jsinspector: 044105eea064aec81adc5e4d777a8f6589e7d094
+  react-native-geolocation: 8710b1bae31e734191273344d52141151b94bb3f
   React-RCTActionSheet: 08864c609d9f959abf3d51fdd93f8bc6e91f21eb
   React-RCTAnimation: a4547e9fac2627ded3df9d302f5558b475faf819
   React-RCTBlob: 62d5c263a2adb8f7a2cafd601beba18a2d99cbbb
@@ -182,6 +188,6 @@ SPEC CHECKSUMS:
   React-RCTWebSocket: f32b93e0953d7c07fd5dd45305406282cfdc95cf
   yoga: 88c514f310aff89b94a14c5fbf44b95735af0cb7
 
-PODFILE CHECKSUM: 15647864fc5cc46b189a06b308df76bd21c284ab
+PODFILE CHECKSUM: a558af4af5b18b524b4946d8649865f0dde8b621
 
 COCOAPODS: 1.5.3
