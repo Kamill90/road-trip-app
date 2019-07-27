@@ -10,11 +10,21 @@ import {
 } from "react-native";
 import Geolocation from "react-native-geolocation-service";
 
-class App extends Component {
+interface State {
+  latitude: string;
+  longitude: string;
+}
+
+class App extends Component<any, State> {
+  state = {
+    latitude: "",
+    longitude: ""
+  };
   componentDidMount() {
     Geolocation.getCurrentPosition(
-      position => {
-        console.warn(position);
+      (position: any) => {
+        const { latitude, longitude } = position.coords;
+        this.setState({ latitude, longitude });
       },
       error => {
         console.warn(error.code, error.message);
@@ -24,9 +34,12 @@ class App extends Component {
   }
 
   render() {
+    const { latitude, longitude } = this.state;
     return (
       <View style={styles.mainContainer}>
-        <Text>Hello world</Text>
+        <Text>These are yours coordinates</Text>
+        <Text>{`longtitude: ${longitude}`}</Text>
+        <Text>{`latitude: ${latitude}`}</Text>
       </View>
     );
   }
