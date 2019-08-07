@@ -8,14 +8,18 @@ import {
   Text,
   StatusBar
 } from "react-native";
+import { ApolloProvider } from "react-apollo";
 import Geolocation from "react-native-geolocation-service";
+
+import { client } from "api";
+import HomeScreen from "./home/HomeScreen";
 
 interface State {
   latitude: string;
   longitude: string;
 }
 
-class App extends Component<any, State> {
+class App extends Component<State> {
   state = {
     latitude: "",
     longitude: ""
@@ -36,11 +40,14 @@ class App extends Component<any, State> {
   render() {
     const { latitude, longitude } = this.state;
     return (
-      <View style={styles.mainContainer}>
-        <Text>These are yours coordinates</Text>
-        <Text>{`longtitude: ${longitude}`}</Text>
-        <Text>{`latitude: ${latitude}`}</Text>
-      </View>
+      <ApolloProvider client={client}>
+        <View style={styles.mainContainer}>
+          <HomeScreen />
+          <Text>These are yours coordinates</Text>
+          <Text>{`longtitude: ${longitude}`}</Text>
+          <Text>{`latitude: ${latitude}`}</Text>
+        </View>
+      </ApolloProvider>
     );
   }
 }
