@@ -1,14 +1,15 @@
 import { locationDataQuery } from "./queries";
+import { LocationData } from "./models";
 
-export const setLocationData = (_root, variables, { cache, getCacheKey }) => {
-  // const id = getCacheKey({
-  //   __typename: "geolocation",
-  //   id: variables.id
-  // });
+export const setLocationData = (
+  _root: any,
+  { longitude, latitude }: LocationData,
+  { cache }: any
+) => {
+  const currentLocationData = cache.readQuery({ query: locationDataQuery })
+    .locationData;
 
-  const locationData = cache.readQuery({ query: locationDataQuery });
-  console.log("locationData", locationData);
-  // const data = { completed: !todo.completed };
-  // cache.writeData({ id, data });
-  return null;
+  const newLocationData = { ...currentLocationData, longitude, latitude };
+  cache.writeData({ data: newLocationData });
+  return newLocationData;
 };

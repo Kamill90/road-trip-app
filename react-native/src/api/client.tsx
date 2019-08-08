@@ -23,22 +23,6 @@ export const client = new ApolloClient({
       setLocationData
     }
   }
-  // clientState: {
-  //   resolvers: {
-  //     Mutation: {
-  //       setLocationData
-  //     }
-  //   },
-  //   defaults: initialData
-  // }
 });
 
-cache.writeData({
-  data: {
-    locationData: {
-      longitude: "",
-      latitude: "",
-      __typename: "locationData"
-    }
-  }
-});
+cache.writeData(initialData);
