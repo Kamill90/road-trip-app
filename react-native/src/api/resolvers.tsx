@@ -10,6 +10,6 @@ export const setLocationData = (
     .locationData;
 
   const newLocationData = { ...currentLocationData, longitude, latitude };
-  cache.writeData({ data: newLocationData });
+  cache.writeData({ data: { locationData: newLocationData } });
   return newLocationData;
 };

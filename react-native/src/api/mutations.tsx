@@ -1,7 +1,7 @@
-// import { gql } from "apollo-boost";
+import { gql } from "apollo-boost";
 
-// export const networkStatusMutation = gql`
-//   mutation networkStatusMutation($isConnected: String) {
-//     networkStatusMutation(isConnected: $isConnected) @client
-//   }
-// `;
+export const setLocationDataMutation = gql`
+  mutation setLocationData($longitude: String, $latitude: String) {
+    setLocationData(longitude: $longitude, latitude: $latitude) @client
+  }
+`;

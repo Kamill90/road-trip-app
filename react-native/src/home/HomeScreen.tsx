@@ -1,25 +1,21 @@
 import React, { PureComponent } from "react";
-
 import { StyleSheet, View, Text } from "react-native";
-import { ApolloProvider } from "react-apollo";
+import { compose, graphql, MutationFn } from "react-apollo";
 import Geolocation from "react-native-geolocation-service";
 
-import { client } from "api";
+import { setLocationDataMutation } from "api";
 
-interface State {
-  latitude: string;
-  longitude: string;
-}
-
-class HomeScreen extends PureComponent<any, State> {
-  state = {
-    latitude: "",
-    longitude: ""
-  };
+class HomeScreen extends PureComponent {
   componentDidMount() {
     Geolocation.getCurrentPosition(
       (position: any) => {
         const { latitude, longitude } = position.coords;
+        this.props.setLocationData({
+          variables: {
+            longitude,
+            latitude
+          }
+        });
         this.setState({ latitude, longitude });
       },
       error => {
@@ -28,17 +24,11 @@ class HomeScreen extends PureComponent<any, State> {
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
   }
-
   render() {
-    const { latitude, longitude } = this.state;
     return (
-      <ApolloProvider client={client}>
-        <View style={styles.mainContainer}>
-          <Text>These are yours coordinates</Text>
-          <Text>{`longtitude: ${longitude}`}</Text>
-          <Text>{`latitude: ${latitude}`}</Text>
-        </View>
-      </ApolloProvider>
+      <View style={styles.mainContainer}>
+        <Text>You coordinates have been stored</Text>
+      </View>
     );
   }
 }
@@ -51,4 +41,6 @@ const styles = StyleSheet.create({
   }
 });
 
-export default HomeScreen;
+export default compose(
+  graphql<any, any>(setLocationDataMutation, { name: "setLocationData" })
+)(HomeScreen);
