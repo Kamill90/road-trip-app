@@ -13,6 +13,10 @@ struct ContentView: View {
     @ObservedObject var location = LocationService()
 
     var body: some View {
-        Text("Hello at \(self.location.latitude)")
+        VStack{
+            Text("Longitude: \(self.location.coordinates.longitude)")
+            Text("Latitude: \(self.location.coordinates.latitude)")
+        }
+        
     }
 }
