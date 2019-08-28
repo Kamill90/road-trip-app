@@ -6,6 +6,10 @@ import Geolocation from "react-native-geolocation-service";
 import { setLocationDataMutation } from "api";
 
 class HomeScreen extends PureComponent {
+  state = {
+    longitude: 0.0,
+    latitude: 0.0
+  };
   componentDidMount() {
     Geolocation.getCurrentPosition(
       (position: any) => {
@@ -27,7 +31,9 @@ class HomeScreen extends PureComponent {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text>You coordinates have been stored</Text>
+        <Text>Your coordinates have been stored</Text>
+        <Text>Longitude: {this.state.longitude}</Text>
+        <Text>Latitude: {this.state.latitude}</Text>
       </View>
     );
   }

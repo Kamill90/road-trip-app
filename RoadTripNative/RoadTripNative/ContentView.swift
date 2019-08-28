@@ -14,6 +14,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack{
+//            Text("Hello")
             Text("Longitude: \(self.location.coordinates.longitude)")
             Text("Latitude: \(self.location.coordinates.latitude)")
         }

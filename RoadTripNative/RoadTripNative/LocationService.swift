@@ -18,8 +18,7 @@ struct Coordinates {
 
 class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
     @Published var coordinates: Coordinates
-    @Published var locationManager: CLLocationManager?
-    
+    var locationManager: CLLocationManager?
     override init() {
         
         locationManager = CLLocationManager()
@@ -31,16 +30,10 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
 
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus, didUpdateLocations locations:[CLLocation]) {
-        print("locationManager")
-        if status == .authorizedWhenInUse {
-           if let locationInfo = locations.last?.coordinate {
-                coordinates.latitude = locationInfo.latitude
-                coordinates.longitude = locationInfo.longitude
-            } else {
-                print("nothing to print")
-            }
-            
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last?.coordinate {
+            coordinates.latitude = location.latitude
+            coordinates.longitude = location.longitude
         }
     }
 }
