@@ -11,6 +11,20 @@ class HomeScreen extends PureComponent {
     latitude: 0.0
   };
   componentDidMount() {
+    this.getCurrentLocation();
+    this.getLocationInfo(this.state);
+  }
+
+  getLocationInfo = ({ longitude, latitude }) => {
+    // fetch
+    const key = "AIzaSyACJyJ6MKDJEhBpOnq0IB1riBjNn9EuUMo";
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${key}`;
+
+    console.log(url);
+    fetch(url);
+  };
+
+  getCurrentLocation = () =>
     Geolocation.getCurrentPosition(
       (position: any) => {
         const { latitude, longitude } = position.coords;
@@ -27,7 +41,7 @@ class HomeScreen extends PureComponent {
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
-  }
+
   render() {
     return (
       <View style={styles.mainContainer}>
