@@ -1,53 +1,61 @@
 import React, { PureComponent } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Button } from "react-native";
 import { compose, graphql, MutationFn } from "react-apollo";
 import Geolocation from "react-native-geolocation-service";
 
-import { setLocationDataMutation } from "api";
+import { setLocationDataMutation, LocationData } from "api";
 
-class HomeScreen extends PureComponent {
-  state = {
-    longitude: 0.0,
-    latitude: 0.0
-  };
-  componentDidMount() {
+interface Props {
+  setLocationData: ({ variables }: LocationData) => void;
+}
+
+class HomeScreen extends PureComponent<Props> {
+  async componentDidMount() {
     this.getCurrentLocation();
-    this.getLocationInfo(this.state);
   }
 
-  getLocationInfo = ({ longitude, latitude }) => {
-    // fetch
-    const key = "AIzaSyACJyJ6MKDJEhBpOnq0IB1riBjNn9EuUMo";
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${key}`;
+  getLocationInfo = async (coordinates: LocationData) => {
+    console.log(coordinates);
+    const key =
+      "AiV3M_0REDTwcF-d8vudQn16tCJs9As_bpVxypS2obxQA70-Sz2iwfaXjE3_PA62"; //to the anv
+    const url = `http://dev.virtualearth.net/REST/v1/Locations/${coordinates.latitude},${coordinates.longitude}?o=json&key=${key}`;
 
-    console.log(url);
-    fetch(url);
+    const response = await fetch(url);
+    const data = response.json();
+    return data;
   };
 
-  getCurrentLocation = () =>
+  getCurrentLocation = async () => {
     Geolocation.getCurrentPosition(
-      (position: any) => {
+      position => {
         const { latitude, longitude } = position.coords;
-        this.props.setLocationData({
-          variables: {
-            longitude,
-            latitude
-          }
+        this.getLocationInfo({ latitude, longitude }).then(data => {
+          const address = data.resourceSets[0].resources[0].address;
+          console.log({
+            countryRegion: address.countryRegion,
+            adminDistrict: address.adminDistrict
+          });
+          this.props.setLocationData({
+            variables: {
+              countryRegion: address.countryRegion,
+              adminDistrict: address.adminDistrict
+            }
+          });
         });
-        this.setState({ latitude, longitude });
       },
       error => {
         console.warn(error.code, error.message);
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
+  };
 
+  gotoGameScreen = () => {};
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text>Your coordinates have been stored</Text>
-        <Text>Longitude: {this.state.longitude}</Text>
-        <Text>Latitude: {this.state.latitude}</Text>
+        <Text>Wolcome</Text>
+        <Button title="welcome" onPress={this.gotoGameScreen} />
       </View>
     );
   }

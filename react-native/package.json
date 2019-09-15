@@ -17,7 +17,8 @@
     "react": "16.8.6",
     "react-apollo": "^2.6.0",
     "react-native": "0.60.0",
-    "react-native-geolocation-service": "^3.0.0"
+    "react-native-geolocation-service": "^3.0.0",
+    "react-navigation": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",

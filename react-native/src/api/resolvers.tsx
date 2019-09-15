@@ -3,13 +3,17 @@ import { LocationData } from "./models";
 
 export const setLocationData = (
   _root: any,
-  { longitude, latitude }: LocationData,
+  { countryRegion, adminDistrict }: any,
   { cache }: any
 ) => {
   const currentLocationData = cache.readQuery({ query: locationDataQuery })
     .locationData;
 
-  const newLocationData = { ...currentLocationData, longitude, latitude };
+  const newLocationData = {
+    ...currentLocationData,
+    countryRegion,
+    adminDistrict
+  };
   cache.writeData({ data: { locationData: newLocationData } });
   return newLocationData;
 };

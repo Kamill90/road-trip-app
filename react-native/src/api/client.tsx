@@ -9,8 +9,8 @@ const cache = new InMemoryCache();
 export const initialData = {
   data: {
     locationData: {
-      longitude: "",
-      latitude: "",
+      countryRegion: "",
+      adminDistrict: "",
       __typename: "locationData"
     }
   }
