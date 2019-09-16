@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
 import { compose, graphql, MutationFn } from "react-apollo";
 import Geolocation from "react-native-geolocation-service";
+import Config from "react-native-config";
 
 import { setLocationDataMutation, LocationData } from "api";
 
@@ -15,10 +16,7 @@ class HomeScreen extends PureComponent<Props> {
   }
 
   getLocationInfo = async (coordinates: LocationData) => {
-    console.log(coordinates);
-    const key =
-      "AiV3M_0REDTwcF-d8vudQn16tCJs9As_bpVxypS2obxQA70-Sz2iwfaXjE3_PA62"; //to the anv
-    const url = `http://dev.virtualearth.net/REST/v1/Locations/${coordinates.latitude},${coordinates.longitude}?o=json&key=${key}`;
+    const url = `http://dev.virtualearth.net/REST/v1/Locations/${coordinates.latitude},${coordinates.longitude}?o=json&key=${Config.BING_MAP_KEY}`;
 
     const response = await fetch(url);
     const data = response.json();
@@ -31,10 +29,6 @@ class HomeScreen extends PureComponent<Props> {
         const { latitude, longitude } = position.coords;
         this.getLocationInfo({ latitude, longitude }).then(data => {
           const address = data.resourceSets[0].resources[0].address;
-          console.log({
-            countryRegion: address.countryRegion,
-            adminDistrict: address.adminDistrict
-          });
           this.props.setLocationData({
             variables: {
               countryRegion: address.countryRegion,

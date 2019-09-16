@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RoadTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RoadTripTests.m */; };
-		0A4EA0723CBD5F016FA53064 /* libPods-RoadTripTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3B2B445F86EF4D7849D1BD /* libPods-RoadTripTests.a */; };
+		031A1BE163FCD4D5B03B59F5 /* libPods-RoadTripTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2544405857B3115A3562CE76 /* libPods-RoadTripTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		27DCF5FE4A104ABC9029455A /* libPods-RoadTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6CAC9FA889C95A411AA5F9 /* libPods-RoadTrip.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RoadTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RoadTripTests.m */; };
-		6FA352A1FEA79826142F5571 /* libPods-RoadTrip-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 863D1FE970399021080FC67E /* libPods-RoadTrip-tvOS.a */; };
-		A1BC640B19BC8E572C128492 /* libPods-RoadTrip-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C53447AE0498E8ED24AD37DD /* libPods-RoadTrip-tvOSTests.a */; };
-		A446B8418002D3D958470406 /* libPods-RoadTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D904364892BBEE952D732FD /* libPods-RoadTrip.a */; };
+		49E7C75036FB9D645C7C8BFF /* libPods-RoadTrip-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670EA831B75E8E12B308DB7A /* libPods-RoadTrip-tvOSTests.a */; };
+		90482A932AB4B4CE40EBEE87 /* libPods-RoadTrip-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CEFECB405A6DD606AFD59C /* libPods-RoadTrip-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		00E356EE1AD99517003FC87E /* RoadTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RoadTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoadTripTests.m; sourceTree = "<group>"; };
-		0E38C2C63F0771ED7C9015FF /* Pods-RoadTripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTripTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTripTests/Pods-RoadTripTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RoadTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RoadTrip/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RoadTrip/AppDelegate.m; sourceTree = "<group>"; };
@@ -52,19 +51,20 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RoadTrip/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RoadTrip/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RoadTrip/main.m; sourceTree = "<group>"; };
-		1D904364892BBEE952D732FD /* libPods-RoadTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2544405857B3115A3562CE76 /* libPods-RoadTripTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTripTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* RoadTrip-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RoadTrip-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RoadTrip-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RoadTrip-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EDD2D2040E4B05B71F2B73C /* Pods-RoadTrip-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip-tvOSTests/Pods-RoadTrip-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		56E5E1A804561A3A0933AFFE /* Pods-RoadTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip.release.xcconfig"; sourceTree = "<group>"; };
-		710C3F445BFACAB3A0E71801 /* Pods-RoadTrip-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip-tvOS/Pods-RoadTrip-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		7C2D1E85E1BB9497303A2FF6 /* Pods-RoadTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTripTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTripTests/Pods-RoadTripTests.release.xcconfig"; sourceTree = "<group>"; };
-		7E3B2B445F86EF4D7849D1BD /* libPods-RoadTripTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTripTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		863D1FE970399021080FC67E /* libPods-RoadTrip-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTrip-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B255F5C0DE6D2C237AED1173 /* Pods-RoadTrip-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip-tvOS/Pods-RoadTrip-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C53447AE0498E8ED24AD37DD /* libPods-RoadTrip-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTrip-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7B84B228DEA9C000178AA74 /* Pods-RoadTrip-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip-tvOSTests/Pods-RoadTrip-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D01595E9751C97C22468A6F2 /* Pods-RoadTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip.debug.xcconfig"; sourceTree = "<group>"; };
+		305D393E3A8048DFAF1AC00A /* Pods-RoadTrip-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RoadTrip-tvOSTests/Pods-RoadTrip-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3FAE0F4D0EB52E0ED2AB5CBD /* Pods-RoadTrip-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RoadTrip-tvOSTests/Pods-RoadTrip-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		568DD89279E826D47E13D3F4 /* Pods-RoadTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTripTests.release.xcconfig"; path = "Target Support Files/Pods-RoadTripTests/Pods-RoadTripTests.release.xcconfig"; sourceTree = "<group>"; };
+		623BEDDDB63D0FBFCB03C78F /* Pods-RoadTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.debug.xcconfig"; path = "Target Support Files/Pods-RoadTrip/Pods-RoadTrip.debug.xcconfig"; sourceTree = "<group>"; };
+		670EA831B75E8E12B308DB7A /* libPods-RoadTrip-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTrip-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A550DC8533A68E4763D7384 /* Pods-RoadTripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTripTests.debug.xcconfig"; path = "Target Support Files/Pods-RoadTripTests/Pods-RoadTripTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8003FBBCC913AA4F7B269EAF /* Pods-RoadTrip-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RoadTrip-tvOS/Pods-RoadTrip-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B5CEFECB405A6DD606AFD59C /* libPods-RoadTrip-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTrip-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5CD8EC57AB10889AB4FFF3 /* Pods-RoadTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.release.xcconfig"; path = "Target Support Files/Pods-RoadTrip/Pods-RoadTrip.release.xcconfig"; sourceTree = "<group>"; };
+		BC6CAC9FA889C95A411AA5F9 /* libPods-RoadTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoadTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F9A03371A2328815B08BD4 /* Pods-RoadTrip-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RoadTrip-tvOS/Pods-RoadTrip-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A4EA0723CBD5F016FA53064 /* libPods-RoadTripTests.a in Frameworks */,
+				031A1BE163FCD4D5B03B59F5 /* libPods-RoadTripTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A446B8418002D3D958470406 /* libPods-RoadTrip.a in Frameworks */,
+				27DCF5FE4A104ABC9029455A /* libPods-RoadTrip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA352A1FEA79826142F5571 /* libPods-RoadTrip-tvOS.a in Frameworks */,
+				90482A932AB4B4CE40EBEE87 /* libPods-RoadTrip-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1BC640B19BC8E572C128492 /* libPods-RoadTrip-tvOSTests.a in Frameworks */,
+				49E7C75036FB9D645C7C8BFF /* libPods-RoadTrip-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,27 +141,12 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				1D904364892BBEE952D732FD /* libPods-RoadTrip.a */,
-				863D1FE970399021080FC67E /* libPods-RoadTrip-tvOS.a */,
-				C53447AE0498E8ED24AD37DD /* libPods-RoadTrip-tvOSTests.a */,
-				7E3B2B445F86EF4D7849D1BD /* libPods-RoadTripTests.a */,
+				BC6CAC9FA889C95A411AA5F9 /* libPods-RoadTrip.a */,
+				B5CEFECB405A6DD606AFD59C /* libPods-RoadTrip-tvOS.a */,
+				670EA831B75E8E12B308DB7A /* libPods-RoadTrip-tvOSTests.a */,
+				2544405857B3115A3562CE76 /* libPods-RoadTripTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5630786C363903459F9D006D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D01595E9751C97C22468A6F2 /* Pods-RoadTrip.debug.xcconfig */,
-				56E5E1A804561A3A0933AFFE /* Pods-RoadTrip.release.xcconfig */,
-				B255F5C0DE6D2C237AED1173 /* Pods-RoadTrip-tvOS.debug.xcconfig */,
-				710C3F445BFACAB3A0E71801 /* Pods-RoadTrip-tvOS.release.xcconfig */,
-				C7B84B228DEA9C000178AA74 /* Pods-RoadTrip-tvOSTests.debug.xcconfig */,
-				3EDD2D2040E4B05B71F2B73C /* Pods-RoadTrip-tvOSTests.release.xcconfig */,
-				0E38C2C63F0771ED7C9015FF /* Pods-RoadTripTests.debug.xcconfig */,
-				7C2D1E85E1BB9497303A2FF6 /* Pods-RoadTripTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -179,7 +164,7 @@
 				00E356EF1AD99517003FC87E /* RoadTripTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				5630786C363903459F9D006D /* Pods */,
+				9BAFDD05578C08A3296E9BF2 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +182,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9BAFDD05578C08A3296E9BF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				623BEDDDB63D0FBFCB03C78F /* Pods-RoadTrip.debug.xcconfig */,
+				BC5CD8EC57AB10889AB4FFF3 /* Pods-RoadTrip.release.xcconfig */,
+				8003FBBCC913AA4F7B269EAF /* Pods-RoadTrip-tvOS.debug.xcconfig */,
+				D5F9A03371A2328815B08BD4 /* Pods-RoadTrip-tvOS.release.xcconfig */,
+				305D393E3A8048DFAF1AC00A /* Pods-RoadTrip-tvOSTests.debug.xcconfig */,
+				3FAE0F4D0EB52E0ED2AB5CBD /* Pods-RoadTrip-tvOSTests.release.xcconfig */,
+				7A550DC8533A68E4763D7384 /* Pods-RoadTripTests.debug.xcconfig */,
+				568DD89279E826D47E13D3F4 /* Pods-RoadTripTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,7 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RoadTripTests" */;
 			buildPhases = (
-				ED8B8654FD21FB022FCFE4F8 /* [CP] Check Pods Manifest.lock */,
+				5EF16ACB1641406AC49A841A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -223,7 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RoadTrip" */;
 			buildPhases = (
-				3A10569BE252851B44D20DBC /* [CP] Check Pods Manifest.lock */,
+				5B2C7A47449DCFEDB9A36882 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -243,7 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RoadTrip-tvOS" */;
 			buildPhases = (
-				39E5058916BDBD4EF3D3D775 /* [CP] Check Pods Manifest.lock */,
+				A457946E47F4D02C6A02E70A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -263,7 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RoadTrip-tvOSTests" */;
 			buildPhases = (
-				CBAA75AD4DDB851E358BEB6F /* [CP] Check Pods Manifest.lock */,
+				6A4DF0F6A02E9C1D87DA3CAF /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -390,34 +391,20 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		39E5058916BDBD4EF3D3D775 /* [CP] Check Pods Manifest.lock */ = {
+		5B2C7A47449DCFEDB9A36882 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RoadTrip-tvOS-checkManifestLockResult.txt",
+			outputFileListPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3A10569BE252851B44D20DBC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RoadTrip-checkManifestLockResult.txt",
 			);
@@ -426,16 +413,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CBAA75AD4DDB851E358BEB6F /* [CP] Check Pods Manifest.lock */ = {
+		5EF16ACB1641406AC49A841A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoadTripTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A4DF0F6A02E9C1D87DA3CAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RoadTrip-tvOSTests-checkManifestLockResult.txt",
 			);
@@ -444,18 +457,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ED8B8654FD21FB022FCFE4F8 /* [CP] Check Pods Manifest.lock */ = {
+		A457946E47F4D02C6A02E70A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RoadTripTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RoadTrip-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -559,7 +576,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E38C2C63F0771ED7C9015FF /* Pods-RoadTripTests.debug.xcconfig */;
+			baseConfigurationReference = 7A550DC8533A68E4763D7384 /* Pods-RoadTripTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -582,7 +599,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C2D1E85E1BB9497303A2FF6 /* Pods-RoadTripTests.release.xcconfig */;
+			baseConfigurationReference = 568DD89279E826D47E13D3F4 /* Pods-RoadTripTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -602,7 +619,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D01595E9751C97C22468A6F2 /* Pods-RoadTrip.debug.xcconfig */;
+			baseConfigurationReference = 623BEDDDB63D0FBFCB03C78F /* Pods-RoadTrip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -623,7 +640,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56E5E1A804561A3A0933AFFE /* Pods-RoadTrip.release.xcconfig */;
+			baseConfigurationReference = BC5CD8EC57AB10889AB4FFF3 /* Pods-RoadTrip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -644,7 +661,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B255F5C0DE6D2C237AED1173 /* Pods-RoadTrip-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 8003FBBCC913AA4F7B269EAF /* Pods-RoadTrip-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -672,7 +689,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 710C3F445BFACAB3A0E71801 /* Pods-RoadTrip-tvOS.release.xcconfig */;
+			baseConfigurationReference = D5F9A03371A2328815B08BD4 /* Pods-RoadTrip-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -700,7 +717,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7B84B228DEA9C000178AA74 /* Pods-RoadTrip-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 305D393E3A8048DFAF1AC00A /* Pods-RoadTrip-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -727,7 +744,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EDD2D2040E4B05B71F2B73C /* Pods-RoadTrip-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 3FAE0F4D0EB52E0ED2AB5CBD /* Pods-RoadTrip-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
