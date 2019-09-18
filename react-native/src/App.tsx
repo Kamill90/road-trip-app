@@ -1,18 +1,11 @@
-import React, { Component } from "react";
-import { ApolloProvider } from "react-apollo";
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import React, { Component } from 'react';
+import { ApolloProvider } from 'react-apollo';
+import { createAppContainer } from 'react-navigation';
 
-import { client } from "./api/client";
-import HomeScreen from "./home/HomeScreen";
+import { client } from './api/client';
+import { MainNavigator } from './navigators/MainNavigator';
 
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen
-  }
-});
-
-const AppContainer = createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(MainNavigator);
 
 class App extends Component {
   render() {

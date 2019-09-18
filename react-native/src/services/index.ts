@@ -1,3 +1,3 @@
-import _LocationManager from './LocationManager'
+import _LocationManager from './LocationManager';
 
-export const LocationManager = new _LocationManager()
+export const LocationManager = new _LocationManager();

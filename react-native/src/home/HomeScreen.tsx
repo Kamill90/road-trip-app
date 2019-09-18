@@ -1,55 +1,39 @@
-import React, { PureComponent } from "react";
-import { StyleSheet, View, Text, Button } from "react-native";
-import { compose, graphql, MutationFn } from "react-apollo";
-import Geolocation from "react-native-geolocation-service";
-import Config from "react-native-config";
+import React, { PureComponent } from 'react';
+import { StyleSheet, View, Button } from 'react-native';
+import { compose, graphql } from 'react-apollo';
+import { NavigationInjectedProps } from 'react-navigation';
 
-import { setLocationDataMutation, LocationData } from "api";
+import { setLocationDataMutation, LocationData, AddressData } from 'api';
+import { LocationManager } from 'services';
 
-interface Props {
-  setLocationData: ({ variables }: LocationData) => void;
+interface Props extends NavigationInjectedProps {
+  setLocationData: ({ variables }: { variables: LocationData }) => void;
 }
 
 class HomeScreen extends PureComponent<Props> {
-  async componentDidMount() {
-    this.getCurrentLocation();
-  }
-
-  getLocationInfo = async (coordinates: LocationData) => {
-    const url = `http://dev.virtualearth.net/REST/v1/Locations/${coordinates.latitude},${coordinates.longitude}?o=json&key=${Config.BING_MAP_KEY}`;
-
-    const response = await fetch(url);
-    const data = response.json();
-    return data;
+  updateLocation = async () => {
+    try {
+      const address = (await LocationManager.getCurrentLocation()) as AddressData;
+      this.props.setLocationData({
+        variables: {
+          countryRegion: address.countryRegion,
+          adminDistrict: address.adminDistrict,
+        },
+      });
+    } catch (error) {
+      throw error;
+    }
   };
 
-  getCurrentLocation = async () => {
-    Geolocation.getCurrentPosition(
-      position => {
-        const { latitude, longitude } = position.coords;
-        this.getLocationInfo({ latitude, longitude }).then(data => {
-          const address = data.resourceSets[0].resources[0].address;
-          this.props.setLocationData({
-            variables: {
-              countryRegion: address.countryRegion,
-              adminDistrict: address.adminDistrict
-            }
-          });
-        });
-      },
-      error => {
-        console.warn(error.code, error.message);
-      },
-      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    );
+  gotoGameScreen = () => {
+    setInterval(this.updateLocation, 5000);
+    this.props.navigation.navigate('Quiz');
   };
 
-  gotoGameScreen = () => {};
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text>Wolcome</Text>
-        <Button title="welcome" onPress={this.gotoGameScreen} />
+        <Button title="Go to the game" onPress={this.gotoGameScreen} />
       </View>
     );
   }
@@ -58,11 +42,11 @@ class HomeScreen extends PureComponent<Props> {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
 export default compose(
-  graphql<any, any>(setLocationDataMutation, { name: "setLocationData" })
+  graphql<any, any>(setLocationDataMutation, { name: 'setLocationData' }),
 )(HomeScreen);

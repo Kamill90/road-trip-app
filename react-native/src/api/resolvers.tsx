@@ -1,10 +1,10 @@
-import { locationDataQuery } from "./queries";
-import { LocationData } from "./models";
+import { locationDataQuery } from './queries';
+import { LocationData } from './models';
 
 export const setLocationData = (
-  _root: any,
+  _: any,
   { countryRegion, adminDistrict }: any,
-  { cache }: any
+  { cache }: any,
 ) => {
   const currentLocationData = cache.readQuery({ query: locationDataQuery })
     .locationData;
@@ -12,7 +12,7 @@ export const setLocationData = (
   const newLocationData = {
     ...currentLocationData,
     countryRegion,
-    adminDistrict
+    adminDistrict,
   };
   cache.writeData({ data: { locationData: newLocationData } });
   return newLocationData;
