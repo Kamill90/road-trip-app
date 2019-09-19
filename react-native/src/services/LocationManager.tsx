@@ -35,7 +35,6 @@ export default class LocationManager {
     try {
       const response = await fetch(url);
       const data = await response.json();
-
       return data.resourceSets[0].resources[0].address;
     } catch (error) {
       // do something with crashlytics

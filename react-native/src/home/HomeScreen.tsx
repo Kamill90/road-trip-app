@@ -10,7 +10,14 @@ interface Props extends NavigationInjectedProps {
   setLocationData: ({ variables }: { variables: LocationData }) => void;
 }
 
+interface State {
+  locationInterval: () => void;
+}
+
 class HomeScreen extends PureComponent<Props> {
+  state = {
+    locationInterval: setInterval(() => {}),
+  };
   updateLocation = async () => {
     try {
       const address = (await LocationManager.getCurrentLocation()) as AddressData;
@@ -25,15 +32,28 @@ class HomeScreen extends PureComponent<Props> {
     }
   };
 
-  gotoGameScreen = () => {
-    setInterval(this.updateLocation, 5000);
-    this.props.navigation.navigate('Quiz');
+  stopGame = () => {
+    clearInterval(this.state.locationInterval);
+  };
+
+  startGame = () => {
+    this.updateLocation();
+    this.setState(
+      {
+        locationInterval: setInterval(this.updateLocation, 600 * 1000),
+      },
+      () => {
+        this.props.navigation.navigate('Quiz', {
+          stopGame: this.stopGame,
+        });
+      },
+    );
   };
 
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Button title="Go to the game" onPress={this.gotoGameScreen} />
+        <Button title="Go to the game" onPress={this.startGame} />
       </View>
     );
   }
