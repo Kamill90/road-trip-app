@@ -6,6 +6,8 @@ import { NavigationInjectedProps } from 'react-navigation';
 import { setLocationDataMutation, LocationData, AddressData } from 'api';
 import { LocationManager } from 'services';
 
+const INTERVAL_VALUE = 10 * 60 * 1000;
+
 interface Props extends NavigationInjectedProps {
   setLocationData: ({ variables }: { variables: LocationData }) => void;
 }
@@ -40,7 +42,7 @@ class HomeScreen extends PureComponent<Props> {
     this.updateLocation();
     this.setState(
       {
-        locationInterval: setInterval(this.updateLocation, 600 * 1000),
+        locationInterval: setInterval(this.updateLocation, INTERVAL_VALUE),
       },
       () => {
         this.props.navigation.navigate('Quiz', {
