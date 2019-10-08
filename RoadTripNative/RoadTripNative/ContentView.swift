@@ -11,13 +11,10 @@ import Combine
 
 struct ContentView: View {
     @ObservedObject var location = LocationService()
-
     var body: some View {
         VStack{
-//            Text("Hello")
-            Text("Longitude: \(self.location.coordinates.longitude)")
-            Text("Latitude: \(self.location.coordinates.latitude)")
+            Text("countryRegion: \(self.location.address.countryRegion)")
+            Text("adminDistrict: \(self.location.address.adminDistrict)")
         }
-        
     }
 }

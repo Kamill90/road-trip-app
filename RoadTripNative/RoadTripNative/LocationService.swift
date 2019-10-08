@@ -6,19 +6,17 @@
 //  Copyright © 2019 Kamil Lewandowski. All rights reserved.
 //
 
-import Foundation
 import CoreLocation
 import SwiftUI
 import Combine
 
-struct Coordinates {
-    var longitude: CLLocationDegrees
-    var latitude: CLLocationDegrees
-}
 
 class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
-    @Published var coordinates: Coordinates
+    @Published var address = LocationData(countryRegion: "", adminDistrict: "")
+    var coordinates: Coordinates
     var locationManager: CLLocationManager?
+    private let key = Environment.mapApiKey
+
     override init() {
         
         locationManager = CLLocationManager()
@@ -26,7 +24,7 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
         super.init()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
-        locationManager?.startUpdatingLocation()
+        locationManager?.startMonitoringSignificantLocationChanges()
 
     }
     
@@ -34,6 +32,21 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
         if let location = locations.last?.coordinate {
             coordinates.latitude = location.latitude
             coordinates.longitude = location.longitude
+            
+            self.getAddress(longitude: coordinates.longitude, latitude: coordinates.latitude)
         }
+    }
+    
+    func getAddress(longitude: CLLocationDegrees, latitude: CLLocationDegrees) {
+        let url = URL(string: "http://dev.virtualearth.net/REST/v1/Locations/\(latitude),\(longitude)?o=json&key=\(self.key)")!
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+            let response = try! JSONDecoder().decode(Results.self, from: data)
+            DispatchQueue.main.async {
+                self.address.adminDistrict = response.resourceSets[0].resources[0].address.adminDistrict;
+                self.address.countryRegion = response.resourceSets[0].resources[0].address.countryRegion;
+            }
+        }.resume()
     }
 }
