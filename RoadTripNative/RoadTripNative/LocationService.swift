@@ -13,6 +13,7 @@ import Combine
 
 class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
     @Published var address = LocationData(countryRegion: "", adminDistrict: "")
+    @Published var counter = 0
     var coordinates: Coordinates
     var locationManager: CLLocationManager?
     private let key = Environment.mapApiKey
@@ -24,8 +25,14 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
         super.init()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
+    }
+    
+    func startMonitoringLocation() {
         locationManager?.startMonitoringSignificantLocationChanges()
-
+    }
+    
+    func stopMonitoringLocation() {
+        locationManager?.stopMonitoringSignificantLocationChanges()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -46,6 +53,7 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
             DispatchQueue.main.async {
                 self.address.adminDistrict = response.resourceSets[0].resources[0].address.adminDistrict;
                 self.address.countryRegion = response.resourceSets[0].resources[0].address.countryRegion;
+                self.counter += 1
             }
         }.resume()
     }

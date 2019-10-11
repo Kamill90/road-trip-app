@@ -8,6 +8,13 @@
 
 import CoreLocation
 
+class AppState: ObservableObject {
+    @Published var counter = 0
+    @Published var isGameActive = false
+    @Published var countryRegion = ""
+    @Published var adminDistrict = ""
+}
+
 struct Coordinates {
     var longitude: CLLocationDegrees
     var latitude: CLLocationDegrees

@@ -23,7 +23,12 @@ class QuizScreen extends React.PureComponent<Props> {
     }
     return (
       <View style={styles.mainContainer}>
-        <Text> {locationDataResult.locationData.countryRegion} </Text>
+        <Text>
+          countryRegion: {locationDataResult.locationData.countryRegion}{' '}
+        </Text>
+        <Text>
+          adminDistrict: {locationDataResult.locationData.adminDistrict}{' '}
+        </Text>
         <Button title="Stop the game" onPress={this.stopGame} />
       </View>
     );

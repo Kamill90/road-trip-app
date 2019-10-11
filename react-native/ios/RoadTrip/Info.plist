@@ -37,10 +37,10 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Contenct depends on your location</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Contenct depends on your location</string>
+	<string>Content depends on your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Content depends on your location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
