@@ -7,14 +7,18 @@
 //
 
 import SwiftUI
-import Combine
 
 struct ContentView: View {
-    @ObservedObject var location = LocationService()
     var body: some View {
-        VStack{
-            Text("countryRegion: \(self.location.address.countryRegion)")
-            Text("adminDistrict: \(self.location.address.adminDistrict)")
+        NavigationView{
+            VStack{
+                NavigationLink(destination: GameView()) {
+                    Text("Go to the game")
+                }
+            }.navigationBarTitle("Road trip game")
         }
     }
 }
+
+
+

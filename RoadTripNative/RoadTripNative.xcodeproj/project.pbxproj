@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A229D3EE235116BA002348E5 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229D3ED235116BA002348E5 /* GameView.swift */; };
 		A22B25A62336C730000EC94C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22B25A52336C730000EC94C /* Models.swift */; };
 		A2383BFF23153A810076B289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2383BFE23153A810076B289 /* AppDelegate.swift */; };
 		A2383C0123153A810076B289 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2383C0023153A810076B289 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A229D3ED235116BA002348E5 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		A22B25A52336C730000EC94C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A2383BFB23153A810076B289 /* RoadTripNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadTripNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2383BFE23153A810076B289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				A22B25A52336C730000EC94C /* Models.swift */,
 				A2383C0023153A810076B289 /* SceneDelegate.swift */,
 				A2383C0223153A810076B289 /* ContentView.swift */,
+				A229D3ED235116BA002348E5 /* GameView.swift */,
 				A2383C0423153A820076B289 /* Assets.xcassets */,
 				A2383C0923153A820076B289 /* LaunchScreen.storyboard */,
 				A2383C0623153A820076B289 /* Preview Content */,
@@ -163,6 +166,7 @@
 				A2383C15231540C10076B289 /* LocationService.swift in Sources */,
 				A2383C0323153A810076B289 /* ContentView.swift in Sources */,
 				A22B25A62336C730000EC94C /* Models.swift in Sources */,
+				A229D3EE235116BA002348E5 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,9 +304,10 @@
 			baseConfigurationReference = A2F8CE75234BD52E00C408FA /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "RoadTripNative/Preview\\ Content";
-				DEVELOPMENT_TEAM = W25R7HDRSX;
+				DEVELOPMENT_TEAM = AB538NMNYK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RoadTripNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +316,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = donkamillo.RoadTripNative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -320,9 +326,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "RoadTripNative/Preview\\ Content";
-				DEVELOPMENT_TEAM = W25R7HDRSX;
+				DEVELOPMENT_TEAM = AB538NMNYK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RoadTripNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = donkamillo.RoadTripNative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -346,7 +354,7 @@
 				A2383C0E23153A820076B289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A2383C0F23153A820076B289 /* Build configuration list for PBXNativeTarget "RoadTripNative" */ = {
 			isa = XCConfigurationList;
@@ -355,7 +363,7 @@
 				A2383C1123153A820076B289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

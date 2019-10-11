@@ -24,8 +24,15 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
         super.init()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
-        locationManager?.startMonitoringSignificantLocationChanges()
 
+    }
+    
+    func startMonitoringLocation() {
+        locationManager?.startMonitoringSignificantLocationChanges()
+    }
+    
+    func stopMonitoringLocation() {
+        locationManager?.stopMonitoringSignificantLocationChanges()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
