@@ -1,35 +1,28 @@
 import React from 'react';
-import { View, StyleSheet, Button, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { compose, graphql } from 'react-apollo';
 import { NavigationInjectedProps } from 'react-navigation';
 
 import { locationDataQuery } from 'api';
 
 interface Props extends NavigationInjectedProps {
-  locationDataResult: any;
+  locationDataResults: any;
 }
 
 class QuizScreen extends React.PureComponent<Props> {
-  stopGame = () => {
-    const stop = this.props.navigation.getParam('stopGame');
-    stop();
-    this.props.navigation.navigate('Home');
-  };
-
   render() {
-    const { locationDataResult } = this.props;
-    if (locationDataResult.loading) {
+    const { locationDataResults } = this.props;
+    if (locationDataResults.loading) {
       return null;
     }
     return (
       <View style={styles.mainContainer}>
         <Text>
-          countryRegion: {locationDataResult.locationData.countryRegion}{' '}
+          countryRegion: {locationDataResults.locationData.countryRegion}
         </Text>
         <Text>
-          adminDistrict: {locationDataResult.locationData.adminDistrict}{' '}
+          adminDistrict: {locationDataResults.locationData.adminDistrict}
         </Text>
-        <Button title="Stop the game" onPress={this.stopGame} />
       </View>
     );
   }
@@ -44,5 +37,5 @@ const styles = StyleSheet.create({
 });
 
 export default compose(
-  graphql(locationDataQuery, { name: 'locationDataResult' }),
+  graphql(locationDataQuery, { name: 'locationDataResults' }),
 )(QuizScreen);

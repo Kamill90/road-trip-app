@@ -96,11 +96,9 @@ class HomeScreen extends PureComponent<Props> {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginVertical: 200,
-    justifyContent: 'space-around',
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
-    height: 200,
-    width: '100%',
   },
 });
 
