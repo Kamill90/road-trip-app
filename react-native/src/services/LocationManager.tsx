@@ -25,7 +25,7 @@ export default class LocationManager {
           reject(error);
           // TODO send to crashlytics (error.code, error.message);
         },
-        { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 },
+        { timeout: 15000, maximumAge: 10000 },
       );
     });
   }

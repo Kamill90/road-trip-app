@@ -5,6 +5,8 @@ export const locationDataQuery = gql`
     locationData @client {
       countryRegion
       adminDistrict
+      counter
+      isGameActive
     }
   }
 `;

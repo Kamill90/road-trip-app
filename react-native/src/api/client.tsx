@@ -11,6 +11,8 @@ export const initialData = {
     locationData: {
       countryRegion: '',
       adminDistrict: '',
+      counter: 0,
+      isGameActive: false,
       __typename: 'locationData',
     },
   },

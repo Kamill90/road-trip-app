@@ -59,7 +59,7 @@ PODS:
   - React-jsinspector (0.60.0)
   - react-native-config (0.11.7):
     - React
-  - react-native-geolocation (2.0.2):
+  - react-native-geolocation (1.4.2):
     - React
   - React-RCTActionSheet (0.60.0):
     - React-Core (= 0.60.0)
@@ -196,7 +196,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 7a3554f703a58963ec80b860144ea0f0e9b910e1
   React-jsinspector: d4ed52225912efe0019bb7f1a225aec20f23049a
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
-  react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
+  react-native-geolocation: a7b94614afbd5fd8350e0233a2025c8228fc8041
   React-RCTActionSheet: b27ff3cf3a68f917c46d2b94abf938b625b96570
   React-RCTAnimation: 9e4708e5bd65fca8285ce7c0aa076f3f4fa5c2f8
   React-RCTBlob: 6eafcc3a24f33785692a7be24918ade607bc8719
@@ -212,6 +212,6 @@ SPEC CHECKSUMS:
   RNScreens: 402a99b0a27c0c32f079cec12d3ccbd35e20cd7f
   yoga: 616fde658be980aa60a2158835170f3f9c2d04b4
 
-PODFILE CHECKSUM: 1692739a9cf58eb259e9af7c1ae7a656100b4d90
+PODFILE CHECKSUM: 32798ed7890662d8de40c4123b68f2ec16aac52c
 
 COCOAPODS: 1.8.3

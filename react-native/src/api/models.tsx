@@ -1,6 +1,8 @@
 export interface LocationData {
-  countryRegion: string;
-  adminDistrict: string;
+  countryRegion?: string;
+  adminDistrict?: string;
+  counter?: Number;
+  isGameActive?: boolean;
 }
 
 export interface AddressData {

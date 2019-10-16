@@ -10,6 +10,7 @@ target 'RoadTrip' do
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
+  pod 'react-native-geolocation', path: '../node_modules/@react-native-community/geolocation'
   pod 'React-fishhook', :path => '../node_modules/react-native/Libraries/fishhook'
   pod 'React-RCTActionSheet', :path => '../node_modules/react-native/Libraries/ActionSheetIOS'
   pod 'React-RCTAnimation', :path => '../node_modules/react-native/Libraries/NativeAnimation'
@@ -33,8 +34,6 @@ target 'RoadTrip' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
-  pod 'react-native-geolocation', :path => '../node_modules/@react-native-community/geolocation'
-  pod 'react-native-config', :path => '../node_modules/react-native-config'
 
   target 'RoadTripTests' do
     inherit! :search_paths
