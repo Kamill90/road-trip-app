@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, View, Button, Text } from 'react-native';
+import { StyleSheet, View, Button, Text, Alert } from 'react-native';
 import { compose, graphql } from 'react-apollo';
 import { NavigationInjectedProps } from 'react-navigation';
 
@@ -9,7 +9,7 @@ import {
   AddressData,
   locationDataQuery,
 } from 'api';
-import { LocationManager } from 'services';
+import { LocationManager, NotificationService } from 'services';
 
 const MIN = 1;
 const INTERVAL_VALUE = MIN * 60 * 1000;
@@ -17,6 +17,8 @@ interface Props extends NavigationInjectedProps {
   setLocationData: ({ variables }: { variables: LocationData }) => void;
   locationDataResults: any;
 }
+
+const notificationService = new NotificationService();
 
 interface State {
   locationInterval: () => void;
@@ -66,6 +68,10 @@ class HomeScreen extends PureComponent<Props> {
     this.props.navigation.navigate('Quiz');
   };
 
+  sendLocalNotification = () => {
+    notificationService.localNotification();
+  };
+
   render() {
     const { locationDataResults } = this.props;
     return (
@@ -88,6 +94,10 @@ class HomeScreen extends PureComponent<Props> {
         ) : (
           <Button title="Start the game" onPress={this.startGame} />
         )}
+        <Button
+          title="Send local notification"
+          onPress={this.sendLocalNotification}
+        />
         <Button title="Go to the game" onPress={this.goToGame} />
       </View>
     );
