@@ -11,43 +11,41 @@ import SwiftUI
 import Combine
 
 
-class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
+class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var address = LocationData(countryRegion: "", adminDistrict: "")
     @Published var counter = 0
-    var coordinates: Coordinates
-    var locationManager: CLLocationManager?
+    
+    var locationManager = CLLocationManager()
+    var notificationService = NotificationService()
     private let key = Environment.mapApiKey
 
     override init() {
-        
-        locationManager = CLLocationManager()
-        self.coordinates = Coordinates(longitude: CLLocationDegrees.init(), latitude: CLLocationDegrees.init())
         super.init()
-        locationManager?.delegate = self
-        locationManager?.requestWhenInUseAuthorization()
+        self.locationManager.delegate = self
+        self.locationManager.requestAlwaysAuthorization()
     }
     
     func startMonitoringLocation() {
-        locationManager?.startMonitoringSignificantLocationChanges()
+        locationManager.startMonitoringSignificantLocationChanges()
     }
     
     func stopMonitoringLocation() {
-        locationManager?.stopMonitoringSignificantLocationChanges()
+        locationManager.stopMonitoringSignificantLocationChanges()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last?.coordinate {
-            coordinates.latitude = location.latitude
-            coordinates.longitude = location.longitude
-            
-            self.getAddress(longitude: coordinates.longitude, latitude: coordinates.latitude)
+            self.getAddress(longitude: location.longitude, latitude: location.latitude)
+            print(self.address)
+        } else {
+            return
         }
     }
     
     func getAddress(longitude: CLLocationDegrees, latitude: CLLocationDegrees) {
         let url = URL(string: "http://dev.virtualearth.net/REST/v1/Locations/\(latitude),\(longitude)?o=json&key=\(self.key)")!
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        self.notificationService.sendLocalNotification(title: "test", body: "body2")
+        return URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             let response = try! JSONDecoder().decode(Results.self, from: data)
             DispatchQueue.main.async {
@@ -55,6 +53,6 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate{
                 self.address.countryRegion = response.resourceSets[0].resources[0].address.countryRegion;
                 self.counter += 1
             }
-        }.resume()
+       }.resume()
     }
 }

@@ -52,9 +52,9 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Contenct depends on your location</string>
+	<string>Content depends on your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Contenct depends on your location</string>
+	<string>Content depends on your location</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

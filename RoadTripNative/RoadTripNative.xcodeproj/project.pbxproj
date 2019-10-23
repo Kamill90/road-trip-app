@@ -16,6 +16,7 @@
 		A2383C0823153A820076B289 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2383C0723153A820076B289 /* Preview Assets.xcassets */; };
 		A2383C0B23153A820076B289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2383C0923153A820076B289 /* LaunchScreen.storyboard */; };
 		A2383C15231540C10076B289 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2383C14231540C10076B289 /* LocationService.swift */; };
+		A2475ABB235CBA1000DE4C15 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2475ABA235CBA1000DE4C15 /* NotificationService.swift */; };
 		A2F8CE77234D126B00C408FA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8CE76234D126B00C408FA /* Environment.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		A2383C0A23153A820076B289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2383C0C23153A820076B289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2383C14231540C10076B289 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		A2475ABA235CBA1000DE4C15 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A2F8CE75234BD52E00C408FA /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A2F8CE76234D126B00C408FA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				A2383C0923153A820076B289 /* LaunchScreen.storyboard */,
 				A2383C0623153A820076B289 /* Preview Content */,
 				A2383C14231540C10076B289 /* LocationService.swift */,
+				A2475ABA235CBA1000DE4C15 /* NotificationService.swift */,
 			);
 			path = RoadTripNative;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				A2383C0123153A810076B289 /* SceneDelegate.swift in Sources */,
 				A2F8CE77234D126B00C408FA /* Environment.swift in Sources */,
 				A2383C15231540C10076B289 /* LocationService.swift in Sources */,
+				A2475ABB235CBA1000DE4C15 /* NotificationService.swift in Sources */,
 				A2383C0323153A810076B289 /* ContentView.swift in Sources */,
 				A22B25A62336C730000EC94C /* Models.swift in Sources */,
 				A229D3EE235116BA002348E5 /* GameView.swift in Sources */,
@@ -247,6 +251,7 @@
 		};
 		A2383C0E23153A820076B289 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F8CE75234BD52E00C408FA /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -324,6 +329,7 @@
 		};
 		A2383C1123153A820076B289 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F8CE75234BD52E00C408FA /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";

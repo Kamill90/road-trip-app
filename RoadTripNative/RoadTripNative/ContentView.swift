@@ -6,11 +6,13 @@
 //  Copyright © 2019 Kamil Lewandowski. All rights reserved.
 //
 
+
 import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @ObservedObject var location = LocationService()
+    
     var body: some View {
         NavigationView{
             VStack{
